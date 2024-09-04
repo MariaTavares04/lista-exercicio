@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: TESTA LADOS DE TRIÂNGULO
+    Receba os três lados de um triângulo. Informe se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. Dica: pesquise sobre a regra para saber se os lados formam um triângulo e também sobre os tipos de triângulos.
+    */    
+   
+    //ENTRADA
+    const ladoUm = prompt("Diga um lado triangulo.");
+    const ladoDois = prompt("Diga outro lado triangulo.");
+    const ladoTres = prompt("Diga o último lado triangulo.");
+    
+    //PROCESSAMENTO
+    if (ladoUm == ladoDois && ladoDois == ladoTres && ladoTres == ladoUm) {
+        alert(`Esse triâgulo é equilatero.`)
+    } else if (ladoUm == ladoDois || ladoUm == ladoTres || ladoDois == ladoTres) {
+        alert(`Esse triâgulo é isóceles.`)
+    } else if (ladoUm != ladoDois && ladoUm != ladoTres && ladoDois != ladoTres) {
+        alert(`Esse triâgulo é escaleno.`)
+    };
+</script>

@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<script>
+    //ENTRADA
+    const dataDeNascimento = Number(prompt(`Informe sua data de nascimento`));
+    const ingresso = Number(prompt(`Informe o seu ingresso na empresa`));
+    const codigo = Number(prompt(`Informe seu código`));
+
+    //PROCESSAMENTO
+    const idade = 2024 - dataDeNascimento
+    const trabalhado = 2024 - ingresso
+
+    if ((idade >= 60 && trabalhado >= 25) || idade >= 65 || trabalhado >= 30) {
+        document.write(`Idade:${idade} anos. Anos trabalhados:${trabalhado} anos.`);
+        alert(`Requer aposentadoria`);
+    } else {
+        document.write(`Idade:${idade} anos. Anos trabalhados:${trabalhado} anos.`);
+        alert(`Não requer`);
+    }
+</script>

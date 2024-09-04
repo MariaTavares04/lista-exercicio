@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: CAIXA ELETRÔNICO
+    Faça um script para um caixa eletrônico. O script deverá perguntar ao usuário a valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. O script não deve se preocupar com a quantidade de notas existentes na máquina.
+
+    Exemplo: Para sacar a quantia de 256 reais, o script fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
+    Exemplo: Para sacar a quantia de 399 reais, o script fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
+    */
+
+    //ENTRADA
+    const saque = Number(prompt("Informe o valor do saque:"));
+    
+    //PROCESSAMENTO
+    if (numero > 600) {
+        alert("O máximo é 600 reais!")
+    } else if (numero >= 100) {
+        const notaCem = Math.floor(numero / 100);
+        const notaCinquenta = Math.floor((numero - (notaCem * 100)) / 50);
+        const notaDez = Math.floor((numero - ((notaCem * 100) + (notaCinquenta * 50))) / 10);
+        const notaCinco = Math.floor((numero - ((notaCem * 100) + (notaCinquenta * 50) + (notaDez * 10))) / 5);
+        const notaUm = Math.floor((numero - ((notaCem * 100) + (notaCinquenta * 50) + (notaDez * 10) + (notaCinco * 5))));
+        alert(`Forneceremos:
+       ${notaCem} nota(s) de cem
+       ${notaCinquenta} nota(s) de cinquenta
+       ${notaDez} nota(s) de dez
+       ${notaCinco} nota(s) de cinco
+       ${notaUm} nota(s) de um`)
+    } else if (numero >= 50) {
+        const notaCinquenta = Math.floor(numero / 50);
+        const notaDez = Math.floor((numero - ((notaCinquenta * 50))) / 10);
+        const notaCinco = Math.floor((numero - ((notaCinquenta * 50) + (notaDez * 10))) / 5);
+        const notaUm = Math.floor((numero - ((notaCinquenta * 50) + (notaDez * 10) + (notaCinco * 5))));
+        alert(`Forneceremos:
+       ${notaCinquenta} nota(s) de cinquenta
+       ${notaDez} nota(s) de dez
+       ${notaCinco} nota(s) de cinco
+       ${notaUm} nota(s) de um`)
+    } else if (numero >= 10) {
+        const notaDez = Math.floor(numero / 10);
+        const notaCinco = Math.floor((numero - ( + (notaDez * 10))) / 5);
+        const notaUm = Math.floor((numero - ( + (notaDez * 10) + (notaCinco * 5))));
+        alert(`Forneceremos:
+       ${notaDez} nota(s) de dez
+       ${notaCinco} nota(s) de cinco
+       ${notaUm} nota(s) de um`)
+    } else if (numero < 10) {
+        alert(`O mínimo são 10 reais!`)
+    }
+
+
+    alert(
+    )
+</script>
